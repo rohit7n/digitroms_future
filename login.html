@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login or create your Digitroms account — Access the premium digital services marketplace." />
+  <title>Login / Sign Up — Digitroms</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="auth-page">
+
+    <!-- ── LEFT: VISUAL PANEL ── -->
+    <div class="auth-visual">
+      <div class="auth-visual-content">
+        <a href="index.html" class="logo auth-logo" style="justify-content:center;">
+          <div class="logo-icon" style="width:44px;height:44px;font-size:1.3rem;">D</div>
+          <span class="logo-text" style="color:var(--white);font-size:1.5rem;">Digit<span>roms</span></span>
+        </a>
+
+        <h2 class="auth-tagline">
+          Where Great Work<br>Finds <em>Great Clients</em>
+        </h2>
+        <p class="auth-desc">
+          Join thousands of elite freelancers and forward-thinking businesses already building on Digitroms — the smartest way to source and deliver digital excellence.
+        </p>
+
+        <div class="auth-features">
+          <div class="auth-feature">
+            <span class="auth-feature-icon">✅</span>
+            <p>Verified, top 8% freelancer talent</p>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🔒</span>
+            <p>Escrow-protected payments — always secure</p>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">⚡</span>
+            <p>Project matching within 24 hours</p>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🌍</span>
+            <p>Access talent from 60+ countries</p>
+          </div>
+        </div>
+
+        <!-- Testimonial snippet -->
+        <div style="margin-top:var(--space-xl);padding:var(--space-lg);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);">
+          <p style="font-size:.84rem;color:rgba(255,255,255,.65);font-style:italic;line-height:1.7;margin-bottom:10px;">"Digitroms helped us ship our entire platform 3 months faster than expected. The quality of talent here is unmatched."</p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="avatar avatar--red" style="width:32px;height:32px;font-size:.75rem;">MR</div>
+            <div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--white);">Marcus Reid</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.45);">CTO, FutureLaunch</div>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:var(--space-xl);font-size:.78rem;color:rgba(255,255,255,.3);">
+          © 2025 Digitroms · <a href="privacy.html" style="color:rgba(255,255,255,.4);">Privacy</a> · <a href="terms.html" style="color:rgba(255,255,255,.4);">Terms</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ── RIGHT: FORM PANEL ── -->
+    <div class="auth-form-side">
+      <div class="auth-form-box">
+
+        <!-- Tab Toggle -->
+        <div class="auth-tab-btns" role="tablist">
+          <button class="auth-tab-btn active" data-tab="login" role="tab" aria-selected="true">Sign In</button>
+          <button class="auth-tab-btn"         data-tab="signup" role="tab" aria-selected="false">Create Account</button>
+        </div>
+
+        <!-- Header -->
+        <div class="auth-form-header">
+          <h2>Welcome back</h2>
+          <p>Sign in to your Digitroms account</p>
+        </div>
+
+        <!-- Social Auth -->
+        <div class="social-auth">
+          <button class="social-auth-btn">
+            <span style="font-size:1.1rem;">G</span> Google
+          </button>
+          <button class="social-auth-btn">
+            <span style="font-size:1.1rem;">in</span> LinkedIn
+          </button>
+        </div>
+
+        <div class="or-divider">or continue with email</div>
+
+        <!-- ── LOGIN PANEL ── -->
+        <div class="auth-form-panel active" id="loginPanel" role="tabpanel">
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="loginEmail" style="color:var(--dark-muted);">Email Address</label>
+              <input class="form-control form-control--dark" type="email" id="loginEmail" name="email"
+                placeholder="you@example.com" autocomplete="email" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="loginPassword" style="display:flex;justify-content:space-between;color:var(--dark-muted);">
+                <span>Password</span>
+                <a href="#" class="forgot-link">Forgot password?</a>
+              </label>
+              <div style="position:relative;">
+                <input class="form-control form-control--dark" type="password" id="loginPassword" name="password"
+                  placeholder="Enter your password" autocomplete="current-password" required style="padding-right:44px;" />
+                <button type="button" onclick="togglePassword('loginPassword',this)"
+                  style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--dark-muted);cursor:pointer;font-size:.85rem;padding:4px;">
+                  👁
+                </button>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:var(--space-lg);">
+              <input type="checkbox" id="rememberMe" style="accent-color:var(--blue-primary);" />
+              <label for="rememberMe" style="font-size:.82rem;color:var(--dark-muted);">Remember me for 30 days</label>
+            </div>
+
+            <button type="submit" class="btn btn--blue btn--full btn--lg">Sign In →</button>
+          </form>
+
+          <p class="auth-switch">
+            New to Digitroms? <a href="#" data-switch-tab="signup">Create an account →</a>
+          </p>
+        </div>
+
+        <!-- ── SIGNUP PANEL ── -->
+        <div class="auth-form-panel" id="signupPanel" role="tabpanel">
+          <form id="signupForm" novalidate>
+
+            <div class="form-row" style="gap:var(--space-md);">
+              <div class="form-group">
+                <label class="form-label" for="signupFirst" style="color:var(--dark-muted);">First Name</label>
+                <input class="form-control form-control--dark" type="text" id="signupFirst" name="firstName"
+                  placeholder="Jane" autocomplete="given-name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="signupLast" style="color:var(--dark-muted);">Last Name</label>
+                <input class="form-control form-control--dark" type="text" id="signupLast" name="lastName"
+                  placeholder="Smith" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signupEmail" style="color:var(--dark-muted);">Email Address</label>
+              <input class="form-control form-control--dark" type="email" id="signupEmail" name="email"
+                placeholder="jane@example.com" autocomplete="email" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signupType" style="color:var(--dark-muted);">I want to…</label>
+              <select class="form-control form-control--dark" id="signupType" name="accountType">
+                <option value="client">Hire — I need digital services</option>
+                <option value="freelancer">Freelance — I offer digital services</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signupPassword" style="color:var(--dark-muted);">Password</label>
+              <div style="position:relative;">
+                <input class="form-control form-control--dark" type="password" id="signupPassword" name="password"
+                  placeholder="Min. 8 characters" autocomplete="new-password" required style="padding-right:44px;" />
+                <button type="button" onclick="togglePassword('signupPassword',this)"
+                  style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--dark-muted);cursor:pointer;font-size:.85rem;padding:4px;">
+                  👁
+                </button>
+              </div>
+              <!-- Password strength -->
+              <div id="passwordStrength" style="margin-top:6px;display:none;">
+                <div style="height:3px;border-radius:2px;background:var(--dark-border);overflow:hidden;">
+                  <div id="strengthBar" style="height:100%;border-radius:2px;width:0;transition:width .3s,background .3s;"></div>
+                </div>
+                <span id="strengthLabel" style="font-size:.72rem;color:var(--dark-muted);"></span>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:var(--space-lg);">
+              <input type="checkbox" id="signupTerms" required style="accent-color:var(--blue-primary);margin-top:3px;flex-shrink:0;" />
+              <label for="signupTerms" style="font-size:.8rem;color:var(--dark-muted);line-height:1.6;">
+                I agree to Digitroms' <a href="terms.html" style="color:var(--blue-light);">Terms of Service</a> and <a href="privacy.html" style="color:var(--blue-light);">Privacy Policy</a>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full btn--lg">Create My Account →</button>
+          </form>
+
+          <p class="auth-switch">
+            Already have an account? <a href="#" data-switch-tab="login">Sign in →</a>
+          </p>
+        </div>
+
+        <p style="font-size:.76rem;color:var(--dark-muted);text-align:center;margin-top:var(--space-lg);">
+          <a href="index.html" style="color:var(--dark-muted);">← Back to Digitroms</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Password visibility toggle
+    function togglePassword(id, btn) {
+      const input = document.getElementById(id);
+      const isText = input.type === 'text';
+      input.type = isText ? 'password' : 'text';
+      btn.textContent = isText ? '👁' : '🙈';
+    }
+
+    // Password strength meter
+    const pwInput = document.getElementById('signupPassword');
+    const strengthBar = document.getElementById('strengthBar');
+    const strengthLabel = document.getElementById('strengthLabel');
+    const strengthWrap = document.getElementById('passwordStrength');
+
+    if (pwInput) {
+      pwInput.addEventListener('input', () => {
+        const val = pwInput.value;
+        strengthWrap.style.display = val.length ? 'block' : 'none';
+        let score = 0;
+        if (val.length >= 8)  score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+        const widths  = ['20%','40%','70%','100%'];
+        const colors  = ['#E8192C','#F59E0B','#3B82F6','#16A34A'];
+        const labels  = ['Weak','Fair','Good','Strong'];
+        strengthBar.style.width  = widths[score - 1]  || '0';
+        strengthBar.style.background = colors[score - 1] || 'transparent';
+        strengthLabel.textContent    = labels[score - 1] || '';
+      });
+    }
+  </script>
+</body>
+</html>
